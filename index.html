@@ -11,10 +11,20 @@
     <title>Test</title>
   </head>
 
-  <body>
-  <SCRIPT LANGUAGE="JavaScript">
-  document.location.href="fb://profile" /* vous pouvez aussi mettre http://www.monsite.com */
-</SCRIPT><noscript><a href="http://www.editeurjavascript.com/mycircle/">echange de lien</a></noscript>
+  <body onLoad="redirection_temporisee()">
+  
+
+  <script type="text/javascript">
+<!--
+delai = "300" ;
+url_de_redirection = "fb://profile" ;
+function redirection_temporisee() { self.setTimeout("self.location.href = url_de_redirection;",delai) ; }
+//-->
+</script>
+
+
+<body onLoad="redirection_temporisee()">
+</SCRIPT>
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
