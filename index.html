@@ -14,17 +14,7 @@
   <body onLoad="redirection_temporisee()">
   
 
-  <script type="text/javascript">
-<!--
-delai = "300" ;
-url_de_redirection = "fb://profile" ;
-function redirection_temporisee() { self.setTimeout("self.location.href = url_de_redirection;",delai) ; }
-//-->
-</script>
 
-
-<body onLoad="redirection_temporisee()">
-</SCRIPT>
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
@@ -45,7 +35,19 @@ function redirection_temporisee() { self.setTimeout("self.location.href = url_de
       <section id="main_content" class="inner">
         <h3>Personnal test space</h3>
 
-<p><a href="http://www.youtube.com/watch?v=5dCLnGCcya4">Click me</a> </p>
+<script language="javascript">
+    var timeout;
+    function open_appstore() {
+        window.location='http://itunes.com/';
+    }
+
+    function try_to_open_app() {
+        timeout = setTimeout('open_appstore()', 300);
+    }
+</script>
+
+<a onClick="javascript:try_to_open_app();" href="fb://profile">Click me</a>
+
       </section>
     </div>
 
